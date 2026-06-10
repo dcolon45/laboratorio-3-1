@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- Laboratorio 3.1 - Creación de una página web básica -->
+<!-- Curso: WADE 1000L - National University College -->
+
+<html lang="es">
+
+<head>
+  <!-- META TAGS - Configuración básica del documento -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Laboratorio 3.1 - Estructura básica HTML5">
+  <title>Laboratorio 3.1 - Página Web Básica</title>
+
+  <!-- Enlace al archivo CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ============================================
+       HEADER - Encabezado principal de la página
+       Etiqueta semántica HTML5
+  ============================================ -->
+  <header>
+    <h1>Mi Página Web</h1>
+    <p>Laboratorio 3.1 — Estructura HTML5</p>
+  </header>
+
+  <!-- ============================================
+       NAV - Barra de navegación
+       Etiqueta semántica HTML5 para menús
+  ============================================ -->
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#multimedia">Multimedia</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================================
+       MAIN - Contenido principal de la página
+       Etiqueta semántica HTML5
+  ============================================ -->
+  <main>
+
+    <!-- SECTION - Sección de bienvenida -->
+    <section id="inicio">
+      <h2>Bienvenido</h2>
+      <!-- Párrafo básico con atributo de clase -->
+      <p class="intro">Esta página demuestra la estructura básica de HTML5, incluyendo
+        etiquetas semánticas, multimedia y buenas prácticas de desarrollo web.</p>
+
+      <!-- Lista no ordenada -->
+      <h3>Temas cubiertos:</h3>
+      <ul>
+        <li>Sintaxis básica de HTML</li>
+        <li>Etiquetas semánticas HTML5</li>
+        <li>Elementos multimedia</li>
+        <li>Estructura de página web</li>
+      </ul>
+
+      <!-- Lista ordenada -->
+      <h3>Pasos del laboratorio:</h3>
+      <ol>
+        <li>Crear la estructura HTML5</li>
+        <li>Aplicar estilos con CSS</li>
+        <li>Agregar contenido multimedia</li>
+        <li>Subir a GitHub</li>
+      </ol>
+    </section>
+
+    <!-- ARTICLE - Contenido independiente sobre HTML5 -->
+    <article id="sobre-mi">
+      <h2>Sobre HTML5</h2>
+      <p>HTML5 es la quinta versión del lenguaje de marcado HTML. Introduce nuevas
+        etiquetas semánticas que mejoran la accesibilidad y el SEO de las páginas web.</p>
+
+      <!-- SECTION dentro de ARTICLE -->
+      <section>
+        <h3>Ventajas de HTML5</h3>
+        <p>HTML5 ofrece mejor soporte para multimedia sin necesidad de plugins externos,
+          mejora la semántica del código y añade nuevas APIs para aplicaciones web.</p>
+
+        <!-- Tabla básica HTML -->
+        <table>
+          <caption>Comparación HTML vs HTML5</caption>
+          <thead>
+            <tr>
+              <th>HTML</th>
+              <th>HTML5</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sin etiquetas semánticas</td>
+              <td>header, nav, main, footer</td>
+            </tr>
+            <tr>
+              <td>Requiere plugins para video</td>
+              <td>Etiqueta &lt;video&gt; nativa</td>
+            </tr>
+            <tr>
+              <td>Sin soporte canvas</td>
+              <td>Elemento &lt;canvas&gt; integrado</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </article>
+
+    <!-- SECTION - Multimedia (HTML5) -->
+    <section id="multimedia">
+      <h2>Multimedia HTML5</h2>
+
+      <!-- FIGURE y FIGCAPTION - Etiquetas HTML5 para imágenes con descripción -->
+      <figure>
+        <img src="imagen.jpg" alt="Ejemplo de imagen en HTML5" width="400">
+        <figcaption>Figura 1: Ejemplo del uso de figure y figcaption en HTML5</figcaption>
+      </figure>
+
+      <!-- AUDIO - Etiqueta HTML5 para audio -->
+      <!-- <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento audio.
+      </audio> -->
+
+      <!-- VIDEO - Etiqueta HTML5 para video sin plugins -->
+      <!-- <video width="400" controls>
+        <source src="video.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento video.
+      </video> -->
+
+    <!-- SECTION - Formulario de contacto -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <!-- Formulario básico HTML5 con validación nativa -->
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje..."></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       ASIDE - Contenido secundario / barra lateral
+       Etiqueta semántica HTML5
+  ============================================ -->
+  <aside>
+    <h3>Recursos</h3>
+    <ul>
+      <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+      <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+      <li><a href="https://github.com" target="_blank">GitHub</a></li>
+    </ul>
+  </aside>
+
+  <!-- ============================================
+       FOOTER - Pie de página
+       Etiqueta semántica HTML5
+  ============================================ -->
+  <footer>
+    <p>&copy; 2026 Laboratorio 3.1 — National University College</p>
+    <p>Enlace del proyecto en GitHub:
+      <a href="https://github.com/dcolon24/laboratorio-2-1" target="_blank">
+        github.com/dcolon24/laboratorio-2-1
+      </a>
+    </p>
+  </footer>
+
+</body>
+</html>
