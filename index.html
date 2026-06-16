@@ -120,17 +120,64 @@
         <figcaption>Figura 1: Ejemplo del uso de figure y figcaption en HTML5</figcaption>
       </figure>
 
-      <!-- AUDIO - Etiqueta HTML5 para audio -->
-      <!-- <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
+      <!-- AUDIO - Etiqueta HTML5 para audio sin plugins externos -->
+      <h3>Audio HTML5</h3>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
         Tu navegador no soporta el elemento audio.
-      </audio> -->
+      </audio>
 
       <!-- VIDEO - Etiqueta HTML5 para video sin plugins -->
-      <!-- <video width="400" controls>
-        <source src="video.mp4" type="video/mp4">
+      <h3>Video HTML5</h3>
+      <video width="400" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
         Tu navegador no soporta el elemento video.
-      </video> -->
+      </video>
+
+      <!-- CANVAS - Elemento HTML5 para gráficos con JavaScript -->
+<!-- Canvas permite dibujar gráficos y animaciones directamente en el navegador -->
+<h3>Canvas HTML5 — Animación de Partículas</h3>
+<canvas id="miCanvas" width="500" height="200"></canvas>
+<script>
+  const canvas = document.getElementById('miCanvas');
+  const ctx = canvas.getContext('2d');
+  
+  ctx.fillStyle = '#0d0f14';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  const particulas = [];
+  for (let i = 0; i < 80; i++) {
+    particulas.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 2.5 + 0.5,
+      dx: (Math.random() - 0.5) * 1.2,
+      dy: (Math.random() - 0.5) * 1.2,
+      color: `hsl(${Math.random() * 360}, 80%, 70%)`
+    });
+  }
+
+  function animar() {
+    ctx.fillStyle = 'rgba(13, 15, 20, 0.15)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    particulas.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.fill();
+      p.x += p.dx;
+      p.y += p.dy;
+      if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+    });
+
+    requestAnimationFrame(animar);
+  }
+
+  animar();
+</script>
+    </section>
 
     <!-- SECTION - Formulario de contacto -->
     <section id="contacto">
@@ -172,8 +219,8 @@
   <footer>
     <p>&copy; 2026 Laboratorio 3.1 — National University College</p>
     <p>Enlace del proyecto en GitHub:
-      <a href="https://github.com/dcolon24/laboratorio-2-1" target="_blank">
-        github.com/dcolon24/laboratorio-2-1
+      <a href="https://github.com/dcolon45/laboratorio-3-1" target="_blank">
+        github.com/dcolon45/laboratorio-3-1
       </a>
     </p>
   </footer>
